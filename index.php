@@ -1,5 +1,5 @@
 <?php
-require_once ('function.php');
+require_once ('functions.php');
 
 ValorAleatorio(rand(1,100));
 

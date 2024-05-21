@@ -1,4 +1,5 @@
 <?php
+echo "EJERCICIO UNO <br>";
 //llamo a la funcion y le doy un valor
 ValorAleatorio(rand(1,100));
 //ejecutamos la funcion
@@ -15,9 +16,13 @@ function ValorAleatorio($Nro){
         echo "El numero es igual a 50";
     }
 }
-
+echo "<br>";
+echo "<br> EJERCICIO DOS";
+// llamo la funcion 
 MesesAleatorios(rand(1,12));
+// la variable mes tiene de valor un rand con 12 numeros 
 function MesesAleatorios($mes){
+    // creo un arreglo asociativo con los valores del mes 
     $Conjuntomes = array(
         "1" => "enero",
         "2" => "febrero",
@@ -35,14 +40,26 @@ function MesesAleatorios($mes){
     echo "<br>$mes es igual a $Conjuntomes[$mes]";
 }
 
-DosValores(rand(1,10), rand(1,10));
+echo "<br>";
+echo "<br> EJERCICIO TRES";
+// llamo la funcion q tiene 2 valores de las variables
+DosValores(rand(1,20), rand(1,20));
 function DosValores ($valor1, $valor2){
-    echo " <br>$valor1 $valor2 <br>";
-    for ($valor1; $valor1 < $valor2 ; $valor1++) { 
-        echo $valor1;
-    }
+    echo " <br> valor uno: $valor1";
+    echo "<br> valor dos: $valor2 <br>";
 
-    for ($valor2; $valor2 > $valor1 ; $valor2--) { 
-        echo $valor2;
+    if ($valor1 < $valor2) {
+        for ($i=$valor1; $i < $valor2 ; $i++) { 
+            echo "$i,";
+        }
+        echo "ascendente <br> ";
+    } elseif ($valor1 > $valor2) {
+        for ($a=$valor1; $a > $valor2 ; $a--) { 
+            echo "$a,";
+        }
+        echo "descendente <br>";
     }
 }
+
+echo "<br>";
+echo "<br> EJERCICIO CUATRO";
