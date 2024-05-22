@@ -81,13 +81,13 @@ function PrimeraTabla ($num, $limite){
     }
 }
 
-function Segunda ($num, $limite){
+function Segunda ($num, $limite){ // el dowhile es un bucle igual que el for solo que primero hace la condicion y luego se fija si es true 
     echo "numero: $num limite: $limite <br>";
     $i = 0;
     do {
-        echo $i = $i + $num;
+        echo $i = $i + $num; //acumulador
         echo "<br>";
-    } while ($i <= ($num * $limite)- $num);
+    } while ($i <= ($num * $limite)- $num); // si i es menor-igual a la multiplicacion
 }
 
 function Tercera ($num, $limite){
@@ -138,4 +138,40 @@ echo "<br> el numero 3 sale $tres veces";
 echo "<br> el numero 4 sale $cuatro veces";
 echo "<br> el numero 5 sale $cinco veces";
 echo "<br> el numero 6 sale $seis veces";
+}
+echo "<br>";
+echo "<br>";
+
+function TiroRuleta (){
+    $numero = rand(0, 36); //genero un rand con los numeros que tiene una ruleta
+    echo $numero;
+//la estructura if vamos a saber a que docena pertenece
+    if ($numero <= 12 and $numero >= 1) {
+        echo "<br> pertenece a la primera docena";
+    }
+    elseif ($numero >= 13 and $numero <= 24) {
+        echo "<br> pertenece a la segunda docena";
+    }
+    elseif ($numero >= 25) {
+        echo "<br> pertenece a la tercera docena";
+    }
+    elseif ($numero == 0) {
+        echo "<br> no pertenece a ninguna docena";
+    }
+//separamos cada columna con un array
+    $PrimeraColumna = array (1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34);
+    $SegundaColumna = array (2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35);
+    $TerceraColumna = array (3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36);
+//recorremos el array
+for ($i=0; $i < 12 ; $i++) { 
+    if ($numero == $PrimeraColumna[$i]) { //si el numero (entre el 0 al 36) que sale es igual a algun numero que este en esa array
+        echo "<br> pertenece a primera columna"; // (posicion en realidad) entonces que se escriba
+    }
+    elseif ($numero == $SegundaColumna[$i]) {
+        echo "<br> pertenece a la segunda columna";
+    }
+    elseif ($numero == $TerceraColumna[$i]) {
+        echo "<br> pertenece a la tercera columna";
+    }
+}
 }

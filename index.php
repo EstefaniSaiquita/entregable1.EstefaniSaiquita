@@ -20,4 +20,7 @@ Tercera (2, rand(1,10));
 
 echo "<br> EJERCICIO CINCO <br>";
 TiroDado();
+echo "<br>";
 
+echo "<br> EJERCICIO SEIS <br>";
+TiroRuleta ();
