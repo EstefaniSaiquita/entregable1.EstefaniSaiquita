@@ -102,18 +102,18 @@ function Tercera ($num, $limite){
 
 
 function TiroDado (){
-    $uno = 0;
+    $uno = 0; //declaramos las variables para que el contador funcione
     $dos = 0;
     $tres = 0;
     $cuatro = 0;
     $cinco = 0;
     $seis = 0;
-    for ($i=1; $i <= 10 ; $i++) {
-        $dado = rand(1, 6);
-        echo $dado;
+    for ($i=1; $i <= 100 ; $i++) { // creo un for (bucle) que va a generar 100 numeros
+        $dado = rand(1, 6); // los 100 numeros van a ser de forma aleatoria del 1 al 6
+        echo "$dado,";
 
-        if ($dado == 1) {
-        $uno++;
+        if ($dado == 1) { //si el numero generado es igual a 1
+        $uno++; //entonces que se vaya contando cuanta veces es generado
         }
         elseif ($dado == 2) {
         $dos++;
@@ -130,7 +130,12 @@ function TiroDado (){
         elseif ($dado == 6) {
         $seis++;
         }
-    echo $uno++;
+    
     }
-
+echo "<br> el numero 1 sale $uno veces";
+echo "<br> el numero 2 sale $dos veces";
+echo "<br> el numero 3 sale $tres veces";
+echo "<br> el numero 4 sale $cuatro veces";
+echo "<br> el numero 5 sale $cinco veces";
+echo "<br> el numero 6 sale $seis veces";
 }

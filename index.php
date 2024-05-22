@@ -18,6 +18,6 @@ Segunda (2, rand(1,10));
 echo "<br> estructura While <br>";
 Tercera (2, rand(1,10));
 
-echo "<br> EJERCICIO CINCO";
+echo "<br> EJERCICIO CINCO <br>";
 TiroDado();
 
